@@ -1,28 +1,10 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
- *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
 
-get_header(); ?>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-3 hidden-xs">
-			<?php get_sidebar(); ?>
-		</div>
-		<div class="col-sx-12 col-sm-9">
-		<main id="main" class="site-main" role="main">
-
+			<div class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</div>
+			<div class="col-sm-8">
+				<img src="images/body.gif" alt="body" class="img-responsive" width="100%"><br>
+				<div class="row">
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
@@ -57,10 +39,9 @@ get_header(); ?>
 			get_template_part( 'content', 'none' );
 
 		endif;
-		?>
-
-		</main><!-- .site-main -->			
-		</div>
-	</div>
-</div><!-- end main container -->
-<?php get_footer(); ?>
+		?>					
+				</div>
+			</div>
+		</div><!-- End side bar -->
+	</div><!-- End container -->
+    <!-- End main container -->

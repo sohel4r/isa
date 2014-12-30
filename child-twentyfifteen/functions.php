@@ -23,8 +23,8 @@ add_filter( 'get_search_form', 'child_search_form' );
 
 function child_menu(){
 	register_nav_menus( array(
-		'footer' => __( 'Top Footer Menu', 'twenyfifteen' ),
-		'copyright' => __( 'Copyright footer menu', 'twenyfifteen')
+		'footer' => __( 'Top Footer Menu', 'twentyfifteen' ),
+		'copyright' => __( 'Copyright footer menu', 'twentyfifteen')
 	) );
 }
 add_action( 'init', 'child_menu' );

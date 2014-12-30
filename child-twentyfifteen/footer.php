@@ -1,30 +1,17 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the "site-content" div and all content after.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
-?>
 
-	</div><!-- .site-content -->
+<!-- Footer  -->
 <div class="container">
-	<footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="row">
-		<div class="col-sm-12">
+  <div class="row">
+	<footer class="footer">
+		<div class="col-sm-12 hidden-xs footerMenu">		
 				<?php
 
 				$footer = array(
 					'theme_location'  => 'footer',
 					'menu'            => 'main',
-					'container'       => 'div',
-					'container_class' => 'collapse navbar-collapse',
-					'container_id'    => 'navigation',
-					'menu_class'      => 'nav navbar-nav',
-					'menu_id'         => 'maniNavigation',
+					'container'       => false,
+					'menu_class'      => 'footerTop',
+					'menu_id'         => 'menu',
 					'echo'            => true,
 					'fallback_cb'     => 'wp_page_menu',
 					'before'          => '',
@@ -38,21 +25,17 @@
 
 				wp_nav_menu( $footer );
 
-				?>		
-		</div><!-- End footer menu -->
-	</div>
-	<div class="row">
-		<div class="col-sm-12">
+				?>
+		</div>
+		<div class="col-sm-12 footerCopy">
 				<?php
 
 				$footer1 = array(
 					'theme_location'  => 'footer',
 					'menu'            => 'main',
-					'container'       => 'div',
-					'container_class' => 'collapse navbar-collapse',
-					'container_id'    => 'navigation',
-					'menu_class'      => 'nav navbar-nav',
-					'menu_id'         => 'maniNavigation',
+					'container'       => false,
+					'menu_class'      => 'footerbottom',
+					'menu_id'         => 'menu',
 					'echo'            => true,
 					'fallback_cb'     => 'wp_page_menu',
 					'before'          => '',
@@ -67,13 +50,10 @@
 				wp_nav_menu( $footer1 );
 
 				?>
-	</div>
-	</footer><!-- .site-footer -->
+		</div>
+	</footer>
+  </div>
 </div>
-
-</div><!-- .site -->
-
-<?php wp_footer(); ?>
-
-</body>
+	<?php wp_footer(); ?>
+  </body>
 </html>
